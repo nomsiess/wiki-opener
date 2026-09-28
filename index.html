@@ -15,11 +15,9 @@
     if (pages) {
       let wikiURLs = pages.split("|");
       
-      for (let i = wikiURLs.length - 1; i >= 1; i--) {
+      for (let i = wikiURLs.length - 1; i >= 0; i--) {
         window.open(wikiURLs[i], "_blank");
       }
-
-      window.location.href = wikiURLs[0];
     }
     
   </script>
