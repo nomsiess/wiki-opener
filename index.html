@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> wiki opener yeah</title>
+
+</head> 
+<body>
+
+  <script>
+    
+    let URLstuff = new URLSearchParams(window.location.search);
+    let pages = URLstuff.get("pages");
+
+    if (pages) {
+      let wikiURLs = pages.split("|");
+      
+      for (let i = wikiURLs.length - 1; i >= 1; i--) {
+        window.open(wikiURLs[i], "_blank");
+      }
+
+      window.location.href = wikiURLs[0];
+    }
+    
+  </script>
+
+</body>
+
+</html>  
