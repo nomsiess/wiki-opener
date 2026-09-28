@@ -30,6 +30,10 @@
 
       console.log("opened tabs:", opened);
       console.log("blocked tabs:", blocked);
+
+      if (opened === wikiURLs.length) {
+        window.close();
+      }
     }
     
   </script>
