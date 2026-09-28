@@ -14,10 +14,22 @@
 
     if (pages) {
       let wikiURLs = pages.split("|");
+
+      let opened = 0;
+      let blocked = 0;
       
       for (let i = wikiURLs.length - 1; i >= 0; i--) {
-        window.open(wikiURLs[i], "_blank");
+        let newtab = window.open(wikiURLs[i], "_blank");
+
+        if (newtab) {
+          opened++;
+        } else {
+          blocked++;
+        }
       }
+
+      console.log("opened tabs:", opened);
+      console.log("blocked tabs:", blocked);
     }
     
   </script>
